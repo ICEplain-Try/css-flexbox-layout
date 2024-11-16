@@ -1,1 +1,113 @@
 /* Start coding here */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e66465, #9198e5);
+}
+
+/* Container สำหรับการ์ด */
+.container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    min-height: 600px; /* กำหนดให้เท่ากับความสูงของ card ที่ 2 */
+}
+
+/* การ์ดแต่ละใบ */
+.card {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 450px;
+}
+
+.card {
+    transition: height 0.3s ease;
+}
+
+/* กำหนดให้ DOG Card มีขนาดยาวกว่า */
+.card:nth-of-type(2) {
+    height: 600px; /* ทำให้การ์ดที่ 2 สูงกว่า */
+    align-self: flex-start;
+}
+
+
+
+/* หัวข้อการ์ด */
+h2 {
+    color: white;
+    font-size: 24px;
+    text-align: center;
+}
+
+/* คำอธิบาย */
+.description {
+    color: black;
+    text-align: center;
+    line-height: 1.4;
+}
+
+/* รายการคุณสมบัติ */
+ul {
+    list-style: none;
+    color: black;
+}
+
+li {
+    padding: 5px 0;
+    text-align: center;
+    color: black;
+}
+
+/* ราคา */
+.price {
+    font-size: 32px;
+    color: black;
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* ปุ่ม */
+.btn {
+    background: #ffd700;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: auto;
+}
+
+
+/* สำหรับหน้าจอมือถือ ให้ทุก card มีขนาดเท่ากัน */
+@media (max-width: 968px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .card {
+        width: 100%;
+        height: auto;  /* รีเซ็ตความสูงให้เท่ากันทุก card */
+    }
+    
+    .container .card:nth-child(2) {
+        height: auto;  /* รีเซ็ตความสูงให้เท่ากับ card อื่นๆ */
+    }
+}
