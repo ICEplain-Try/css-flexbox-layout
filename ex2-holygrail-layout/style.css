@@ -1,1 +1,67 @@
 /* Start coding here */
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container */
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.header {
+    background-color: #249292;  /* สีเขียวเข้ม */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Main Content Area */
+.main-content {
+    display: flex;
+    flex: 1;  /* ให้ส่วน main content ขยายเต็มพื้นที่ที่เหลือ */
+}
+
+/* Navigation */
+.navigation {
+    background-color: #e3924a;  /* สีส้ม */
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Content */
+.content {
+    background-color: #e3924a;  /* สีส้ม */
+    flex: 2;
+    padding: 20px;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Advertisement */
+.advertisement {
+    background-color: #e3924a;  /* สีส้ม */
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Footer */
+.footer {
+    background-color: #EEE8AA;  /* สีเหลืองอ่อน */
+    padding: 20px;
+    text-align: center;
+}
